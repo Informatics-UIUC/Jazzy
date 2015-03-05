@@ -1,0 +1,14 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>edu.tamu.idhmc</groupId>
+        <artifactId>eMOP</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <groupId>edu.illinois.i3.spellcheck</groupId>
+    <artifactId>Jazzy</artifactId>
+    <name>Jazzy</name>
+    <description>Spell checking library forked from the open source Jazzy project.</description>
+    <version>1.4-0.5.2</version>
+</project>
