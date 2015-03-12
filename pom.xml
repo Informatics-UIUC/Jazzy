@@ -5,10 +5,12 @@
     <artifactId>Jazzy</artifactId>
     <name>Jazzy</name>
     <description>Spell checking library forked from the open source Jazzy project.</description>
-    <version>1.4-0.5.2</version>
+    <version>1.4-0.5.3-SNAPSHOT</version>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
     <build>
         <resources>
             <resource>
@@ -17,10 +19,12 @@
                     <exclude>**/*.java</exclude>
                 </excludes>
             </resource>
+
             <resource>
                 <directory>src/main/resources</directory>
             </resource>
         </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -33,16 +37,48 @@
             </plugin>
         </plugins>
     </build>
+
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.5</version>
         </dependency>
+
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.1.2</version>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <name>HTRC Nexus Repository</name>
+            <url>http://nexus.htrc.illinois.edu/content/groups/public/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus</id>
+            <name>HTRC Nexus Repository</name>
+            <url>http://htrc.illinois.edu/content/groups/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>htrc.nexus.releases</id>
+            <name>HTRC Release Repository</name>
+            <url>https://nexus.htrc.illinois.edu/content/repositories/releases/</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>htrc.nexus.snapshots</id>
+            <name>HTRC Snapshot Repository</name>
+            <url>https://nexus.htrc.illinois.edu/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
